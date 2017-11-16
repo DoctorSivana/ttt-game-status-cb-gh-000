@@ -16,7 +16,7 @@ WIN_COMBINATIONS {
 }
 
 
-def won(board)
+def won?(board)
   WIN_COMBINATIONS.each do |item|
     item.each do |index|
       if board[index] == "X" || board[index] == "O"
@@ -42,3 +42,12 @@ def full?(board)
   end
 
 end
+
+def draw(board)
+  if full?(board) || won?(board)
+    false
+  elsif true
+  end
+end
+    
+  
