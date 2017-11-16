@@ -63,7 +63,7 @@ def winner(board)
     won?(board).item do |item|
       item.each do |items|
         if items == "X"
-          return "X" 
+          return "X"
         elsif items == "O"
           return "O"
         else nil
@@ -72,8 +72,8 @@ def winner(board)
     end
   end
 end
-          
-      
+
+
     end
-    
+
   end
