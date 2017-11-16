@@ -21,8 +21,10 @@ def won(board)
     item.each do |index|
       if board[index] == "X" && board[index] == "O"
          return item
+       else
+         false
        end
      end
    end
-  
+
 end
