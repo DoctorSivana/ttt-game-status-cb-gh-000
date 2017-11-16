@@ -13,7 +13,7 @@ def won?(board)
       index == "X" || index == "O"
          return item
          break
-         
+
        else
          false
 end
