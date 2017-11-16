@@ -10,15 +10,7 @@ WIN_COMBINATIONS = [[0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [0,4,8
 def won?(board)
   #display_board(board)
   #returns false for an empty board
-  if board == [" ", " ", " ", " ", " ", " ", " ", " ", " "]
-    #puts "I am running"
-    return false
-  end
 
-  #returns false for draw
-  if board == ["X", "O", "X", "O", "X", "X", "O", "X", "O"]
-    return false
-  end
 
   WIN_COMBINATIONS.each do |win_combination|
     #puts "win_combination: #{win_combination}"
