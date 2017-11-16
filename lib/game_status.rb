@@ -49,6 +49,7 @@ def draw(board)
   elsif true
   end
 end
+
 def over?(board)
   if won?(board) || draw?(board) || full?(board)
     true
@@ -56,3 +57,23 @@ def over?(board)
     false
   end
 end
+
+def winner(board)
+  if won?(board)
+    won?(board).item do |item|
+      item.each do |items|
+        if items == "X"
+          return "X" 
+        elsif items == "O"
+          return "O"
+        else nil
+        end
+      end
+    end
+  end
+end
+          
+      
+    end
+    
+  end
