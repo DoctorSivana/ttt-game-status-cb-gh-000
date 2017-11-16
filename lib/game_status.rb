@@ -14,4 +14,15 @@ WIN_COMBINATIONS {
   [0,4,8],
   [3,4,6]
 }
+
+
+def won(board)
+  WIN_COMBINATIONS.each do |item|
+    item.each do |index|
+      if board[index] == "X" && board[index] == "O"
+         return item
+       end
+     end
+   end
   
+end
