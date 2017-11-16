@@ -30,50 +30,26 @@ def won?(board)
 end
 
 def full?(board)
-  all_full = true
-  board.each do |item|
-    if item == "" || item == nil || item == " "
-      return true
-    else
-      false
-    end
+  !board.any? do |element|
+    element == " "
   end
-
-  end
-
 end
 
 def draw(board)
-  if full?(board) || won?(board)
-    false
-  elsif true
-  end
+  full?(board) && !won?(board)
 end
 
 def over?(board)
-  if won?(board) || draw?(board) || full?(board)
+  won?(board) || draw?(board) || full?(board)
     true
-  else
-    false
-  end
 end
 
 def winner(board)
-  if won?(board)
-    won?(board).item do |item|
-      item.each do |items|
-        if items == "X"
-          return "X"
-        elsif items == "O"
-          return "O"
-        else nil
-        end
-      end
-    end
+  if won?(board) = true
+    return board[won?(board)[0]]
+  else
+    return nil
   end
 end
+  
 
-
-    end
-
-  end
