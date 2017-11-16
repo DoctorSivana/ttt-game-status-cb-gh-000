@@ -20,7 +20,7 @@ def won(board)
   WIN_COMBINATIONS.each do |item|
     item.each do |index|
       if board[index] == "X" || board[index] == "O"
-         return item
+         return true
        else
          false
        end
@@ -34,8 +34,8 @@ def full?(board)
   board.each do |item|
     if item == "" || item == nil || item == " "
       return true
-    else 
-      false 
+    else
+      false
     end
   end
 
